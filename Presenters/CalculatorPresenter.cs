@@ -7,12 +7,13 @@ namespace CalculatorExampleMVP.Presenters
 {
     class CalculatorPresenter
     {
-        private Calculator calculator = new Calculator();
+        private Calculator calculator;
         private ICalculator calculatorView;
 
         public CalculatorPresenter(ICalculator view)
         {
             calculatorView = view;
+            calculator = new Calculator();
         }
 
         public void ConnectBetweenModelAndView()
